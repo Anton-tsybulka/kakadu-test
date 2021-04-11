@@ -18,7 +18,7 @@ export default function usersReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                data: [...state.data, action.payload],
+                data: [...state.data, ...action.payload],
             };
         case USERS_FAILED:
             return {
